@@ -225,7 +225,7 @@ class Warrior extends Character {
   
   @override
   void defend(int damage) {
-    int reducedDamage = (damage * 0.8).toInt();  // Уменьшаем урон на 20%
+    int reducedDamage = (damage * 0.8).toInt();  
     health -= reducedDamage;
     print('$name получил $reducedDamage урона. Здоровье: $health');
   }
@@ -237,12 +237,12 @@ class Mage extends Character {
   
   @override
   int attack() {
-    return 10 + level * 3;  // Атака: 10 + уровень * 3
+    return 10 + level * 3;  
   }
   
   @override
   void defend(int damage) {
-    health -= damage;  // Получает полный урон
+    health -= damage;  
     print('$name получил $damage урона. Здоровье: $health');
   }
   
@@ -250,7 +250,7 @@ class Mage extends Character {
   void healAfterAttack() {
     if (health < 100) {
       health += 5;
-      if (health > 100) health = 100;  // Не больше 100 HP
+      if (health > 100) health = 100;  
       print('$name вылечился на 5 HP. Здоровье: $health');
     }
   }
